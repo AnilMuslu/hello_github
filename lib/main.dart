@@ -11,27 +11,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Hello GitHub',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hello GitHub!'),
-      ),
-      body: const Center(
-        child: Text(
-          'Bu benim GitHub\'a yüklediğim ilk Flutter projem!',
-          style: TextStyle(fontSize: 18),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Hello GitHub App'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text('Hello Github App'),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: null, // Henüz işlev yok
+                child: Text('New Button'),
+              ),
+            ],
+          ),
         ),
       ),
     );
